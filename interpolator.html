@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>5D Interpolator Web App - Danilo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1>I am <strong>Danilo</strong>, an Economics <br /> and Data science student at <br /> the university of Cambridge.
+					</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>5D Interpolator Web App</h2>
+						</header>
+						<img src="images/fulls/03.jpg" alt="5D Interpolator Web App" style="width: 100%; height: auto; margin-bottom: 2em;" />
+						
+						<h3>Project Overview</h3>
+						<p>I built this full-stack web app to make 5-dimensional dataset interpolation accessible through a clean web interface. The project combines a FastAPI backend with a Next.js frontend, using scikit-learn's neural networks to handle complex interpolation tasks that would be difficult with traditional methods.</p>
+						
+						<h3>How It Works</h3>
+						<p><strong>Backend:</strong> FastAPI server running Python 3.11+ with scikit-learn's MLPRegressor</p>
+						<p><strong>Frontend:</strong> Next.js 16 with React 19 and TypeScript for the user interface</p>
+						<p><strong>Deployment:</strong> Dockerized with docker-compose for easy setup and scaling</p>
+						<p><strong>Data Processing:</strong> Automated preprocessing with StandardScaler and train/test splitting</p>
+						
+						<h3>What You Can Do</h3>
+						<ul>
+							<li><strong>Upload Your Data:</strong> Drop in .pkl files - the system validates they're 5-dimensional</li>
+							<li><strong>Configure the Network:</strong> Adjust layers, activation functions, and training parameters</li>
+							<li><strong>Watch It Train:</strong> Real-time progress updates during model training</li>
+							<li><strong>Get Predictions:</strong> Input new 5D points and see interpolated results</li>
+							<li><strong>See Performance:</strong> Visual feedback on how well the model is doing</li>
+						</ul>
+						
+						<h3>Under the Hood</h3>
+						<p>The backend handles five main operations: file upload with validation, status checking, model training, prediction generation, and cleanup. I built a custom ML package that orchestrates the data flow - from preprocessing your uploaded pickle files (expecting {"X": features, "y": targets} format) through StandardScaler normalization to training the neural network.</p>
+						
+						<p>The frontend gives you a single-page interface to control everything. Upload your data, tweak the neural network settings, start training, and watch the results come in. The whole thing runs asynchronously so you're not stuck waiting for long training jobs.</p>
+
+						<ul class="actions">
+							<li><a href="index.html" class="button">Back to Portfolio</a></li>
+							<li><a href="https://github.com/daniloldn/5D-Interpolator" class="button primary">View on GitHub</a></li>
+						</ul>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
