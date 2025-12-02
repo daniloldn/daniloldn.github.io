@@ -32,28 +32,30 @@
 						</header>
 						<img src="images/fulls/03.jpg" alt="5D Interpolator Web App" style="width: 100%; height: auto; margin-bottom: 2em;" />
 						
-						<h3>Project Overview</h3>
-						<p>I built this full-stack web app to make 5-dimensional dataset interpolation accessible through a clean web interface. The project combines a FastAPI backend with a Next.js frontend, using scikit-learn's neural networks to handle complex interpolation tasks that would be difficult with traditional methods.</p>
+						<h3>Overview</h3>
+						<p>A full-stack web application that provides neural network-based interpolation for 5-dimensional numerical datasets. Upload your data, configure a neural network, and generate predictions through an intuitive web interface.</p>
 						
-						<h3>How It Works</h3>
-						<p><strong>Backend:</strong> FastAPI server running Python 3.11+ with scikit-learn's MLPRegressor</p>
-						<p><strong>Frontend:</strong> Next.js 16 with React 19 and TypeScript for the user interface</p>
-						<p><strong>Deployment:</strong> Dockerized with docker-compose for easy setup and scaling</p>
-						<p><strong>Data Processing:</strong> Automated preprocessing with StandardScaler and train/test splitting</p>
-						
-						<h3>What You Can Do</h3>
+						<h3>Key Features</h3>
 						<ul>
-							<li><strong>Upload Your Data:</strong> Drop in .pkl files - the system validates they're 5-dimensional</li>
-							<li><strong>Configure the Network:</strong> Adjust layers, activation functions, and training parameters</li>
-							<li><strong>Watch It Train:</strong> Real-time progress updates during model training</li>
-							<li><strong>Get Predictions:</strong> Input new 5D points and see interpolated results</li>
-							<li><strong>See Performance:</strong> Visual feedback on how well the model is doing</li>
+							<li><strong>Data Upload:</strong> Accept pickle files containing 5-dimensional datasets</li>
+							<li><strong>Neural Network Training:</strong> Configurable MLPRegressor with customizable architecture</li>
+							<li><strong>Real-time Predictions:</strong> Generate interpolated values for new 5D input vectors</li>
+							<li><strong>Interactive UI:</strong> Modern React interface with real-time training feedback</li>
+							<li><strong>Dockerized Deployment:</strong> Complete containerized setup for easy deployment</li>
 						</ul>
 						
-						<h3>Under the Hood</h3>
-						<p>The backend handles five main operations: file upload with validation, status checking, model training, prediction generation, and cleanup. I built a custom ML package that orchestrates the data flow - from preprocessing your uploaded pickle files (expecting {"X": features, "y": targets} format) through StandardScaler normalization to training the neural network.</p>
+						<h3>Architecture</h3>
+						<p><strong>Backend (FastAPI + Python):</strong> FastAPI web framework with async support, scikit-learn MLPRegressor for neural network training, automatic data validation and preprocessing, and secure file management with content-based deduplication.</p>
 						
-						<p>The frontend gives you a single-page interface to control everything. Upload your data, tweak the neural network settings, start training, and watch the results come in. The whole thing runs asynchronously so you're not stuck waiting for long training jobs.</p>
+						<p><strong>Frontend (Next.js + React):</strong> Next.js 16 with React 19 and TypeScript, Tailwind CSS for responsive design, real-time updates during training and prediction, plus form validation and error handling.</p>
+						
+						<h3>How to Use</h3>
+						<p><strong>Data Preparation:</strong> Prepare your dataset as a Python pickle file containing a dictionary with "X" (features as N x 5 array) and "y" (targets as N array).</p>
+						
+						<p><strong>Training Process:</strong> Upload your .pkl file, configure neural network parameters (hidden layers, activation function, optimizer, max iterations), train the model with real-time progress monitoring, and generate predictions by entering 5 comma-separated values.</p>
+						
+						<h3>Technical Details</h3>
+						<p>The data processing pipeline includes validation for 5-dimensional structure, StandardScaler normalization with missing value imputation, 80/20 train/test split, and MLPRegressor training with configurable hyperparameters. The system supports only dictionaries in pickle format for now.</p>
 
 						<ul class="actions">
 							<li><a href="index.html" class="button">Back to Portfolio</a></li>
